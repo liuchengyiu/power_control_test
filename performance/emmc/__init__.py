@@ -1,0 +1,1 @@
+from .emmc import emmc_speed
