@@ -1,16 +1,45 @@
 {
-    "Stress_Test":[],
+    "Stress_Test":[
+        {
+            "type":"cpu_stress",
+            "param":{
+                "time":20
+            }
+        },
+        {
+            "type":"ram_stress",
+            "param":{
+                "num": 10,
+                "size": "1G",
+                "release_time": "10",
+                "last_time": 20
+            }
+        }
+    ],
     "Performance_Test":[
         {
-            "type":"emmc",
+            "type":"cpu_frequence",
             "param":{
-                "speed":100
+                "average": 100,
+                "single": 100
+            }
+        },
+        {
+            "type":"emmc_speed",
+            "param":{
+                "speed": 100
+            }
+        },
+        {
+            "type":"ram_speed",
+            "param":{
+                "speed": 100
             }
         }
     ],
     "Hardware_Test":[
         {
-            "type":"eth",
+            "type":"eth_speed",
             "param":{
                 "serverip":"192.168.1.118",
                 "speed":100

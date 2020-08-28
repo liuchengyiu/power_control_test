@@ -1,22 +1,24 @@
 import sys
 import os
 import json
-from performance import performance_test
-from hardware import hardware_test
-from stress import stress_test
-from lib import run_shell
-
+from test import test
 def main(filename):
     json_data = {}
     hardware = []
     performance = []
     stress = []
     result = []
+    print('\033[1;32m \t*********************************** \033[0m')
+    print('\033[1;32m \t     start parse config file       \033[0m')
+    print('\033[1;32m \t*********************************** \033[0m')
     try:
         with open(filename, "r") as fp:
             json_data = json.load(fp)
     except OSError as e:
-        print("read file data error")
+            print('\033[1;31m \t*********************************** \033[0m')
+            print('\033[1;31m \t     parse config file failed       \033[0m')
+            print('\033[1;31m \t*********************************** \033[0m')
+            return 
     for key in json_data:
         if key == "Stress_Test":
             stress = json_data[key]
@@ -24,14 +26,18 @@ def main(filename):
             performance = json_data[key]
         if key == "Hardware_Test":
             hardware = json_data[key]
-    result.extend(performance_test(performance));
-    result.extend(hardware_test(hardware))
-    result.extend(stress_test(stress))
+    print('\033[1;32m \t*********************************** \033[0m')
+    print('\033[1;32m \t     parse config file successful  \033[0m')
+    print('\033[1;32m \t*********************************** \033[0m')   
+    print('\033[1;32m \t     start test                     \033[0m')
+    print('\033[1;32m \t*********************************** \033[0m')    
+    result.extend(test(performance, 'performance'));
+    result.extend(test(hardware, 'hardware'))
+    result.extend(test(stress, 'stress'))
     print(result)
-    
+    return
 
 if __name__ == '__main__':
-    print(sys.argv)
     if (len(sys.argv) < 2):
         print("please give config file")
     else :
