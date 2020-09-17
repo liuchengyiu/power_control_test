@@ -12,6 +12,11 @@ def main(filename):
     result = []
     print(
         '\033[1;32m \t*********************************** \033[0m\n'
+        '\033[1;32m \t     please make sure test dev not used \033[0m\n'
+        '\033[1;32m \t*********************************** \033[0m'
+    )
+    print(
+        '\033[1;32m \t*********************************** \033[0m\n'
         '\033[1;32m \t     start parse config file       \033[0m\n'
         '\033[1;32m \t*********************************** \033[0m'
     )
@@ -66,3 +71,5 @@ if __name__ == '__main__':
         print("please give config file")
     else :
         main(sys.argv[1])
+    print('1111')
+    sys.exit(1)

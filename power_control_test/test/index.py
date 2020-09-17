@@ -17,7 +17,8 @@ test_name_zN = {
     'emmc_speed':'EMMC性能测试',
     'ram_speed':'RAM性能测试',
     'eth_speed':'网卡模块测试',
-    'jc_test':'交采模块测试'
+    'jc_test':'交采模块测试',
+    'card_4g_at_test': '4G模块测试',
 }
 
 for key in test_map.keys():
@@ -33,8 +34,6 @@ def test(test_array, test_type):
     global test_map
     result = []
     test_list = []
-    print()
-    print()
     print('\033[1;32m \t*********************************** \033[0m')
     print('\033[1;32m \t     {} start  \033[0m'.format(test_type))
     print('\033[1;32m \t*********************************** \033[0m')

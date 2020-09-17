@@ -24,4 +24,3 @@ def get_format_test_str(test):
     if test['flag'] == False:
         return result.format(red_high, fail, end, red, test['message'], end)
     return result.format(green_high, success, end, green, test['message'], end)
-    
