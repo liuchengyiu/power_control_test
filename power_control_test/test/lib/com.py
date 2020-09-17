@@ -49,19 +49,14 @@ def dealData(com, data):
 
 def readData(com):
     while True:
-        print(com.exit)
         if com.exit is True:
-            print('1111')
             return
         if com.isOpen() is False:
             sleep(0.1)
             continue
-        print('before')
         data = com.com.read(1)
-        print('after')
         if len(data) != 0:
             com.dealFunc(com, data)
-    print('exit read')
 
 
 class Com:
@@ -88,7 +83,6 @@ class Com:
             stop_bits=serial.STOPBITS_ONE,
             data_bits=serial.EIGHTBITS) -> bool:
         if port_name not in listPortName():
-            print('com name is not exist')
             return False
         try:
             if self.com.isOpen() is True:
