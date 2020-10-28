@@ -1,0 +1,1 @@
+from .card4G import card_4g_at_test

@@ -1,0 +1,58 @@
+4G模块测试,ATI;+CSUB;+CSQ;+CPIN?;+COPS?;+CGREG?;&D2 test failed,False
+4G模块测试,ATI;+CSUB;+CSQ;+CPIN?;+COPS?;+CGREG?;&D2 test failed,False
+4G模块测试,ATI;+CSUB;+CSQ;+CPIN?;+COPS?;+CGREG?;&D2 test failed,False
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+RAM性能测试,num: 0 ram speed: 23.7GB/s,True
+RAM性能测试,num: 1 ram speed: 24.6GB/s,True
+RAM性能测试,num: 2 ram speed: 24.4GB/s,True
+RAM性能测试,num: 3 ram speed: 24.5GB/s,True
+RAM性能测试,num: 4 ram speed: 24.7GB/s,True
+RAM性能测试,num: 5 ram speed: 24.5GB/s,True
+RAM性能测试,num: 6 ram speed: 24.6GB/s,True
+RAM性能测试,num: 7 ram speed: 24.1GB/s,True
+RAM性能测试,num: 8 ram speed: 24.1GB/s,True
+RAM性能测试,num: 9 ram speed: 24.6GB/s,True
+RAM性能测试,average ram: 24.379999999999995GB/s,False
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+CPU压力测试,CPU stress pass!,True
+CPU性能测试,average CPU freq 1799.999MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1799.999MHZ!,True
+CPU性能测试,average CPU freq 1799.999MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1799.999MHZ!,True
+CPU性能测试,average CPU freq 1799.999MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1799.999MHZ!,True
+CPU性能测试,average CPU freq 1799.999MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1799.999MHZ!,True
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+485收发测试,ttyUSB serial error!,False
+继电器开关测试,relay_test pass!,True
+继电器开关测试,ttyACM serial error!,False
