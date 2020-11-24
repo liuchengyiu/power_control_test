@@ -1,4 +1,5 @@
 import psutil
+import json
 
 def average_frequence(average_standard):
     cpu_freq = psutil.cpu_freq()[0]
@@ -14,7 +15,6 @@ def average_frequence(average_standard):
     
 def single_frequence(single_standard):
     cpu_freq = psutil.cpu_freq(percpu=True);
-    index = 0;
     result = [];
     for i in range(0, len(cpu_freq)):
         if cpu_freq[i][0] < single_standard:
@@ -27,6 +27,7 @@ def single_frequence(single_standard):
             "flag": True,
             "message": 'num: ' + str(i) + " CPU freq: {}MHZ!".format(cpu_freq[i][0])
         })
+
     return result;
 
 def cpu_frequence(d):

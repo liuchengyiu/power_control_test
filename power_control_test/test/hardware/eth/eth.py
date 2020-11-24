@@ -7,7 +7,10 @@ def deal_shell(shell_result):
         if line.find("/s") == -1:
             continue;
         ds = re.split(' *', line.strip());
-        return float(ds[len(ds)-2])
+        try:
+            return float(ds[len(ds)-2])
+        except Exception as e:
+            return -1
 
 def eth_speed(d):
     serverip = d["serverip"]
@@ -21,7 +24,7 @@ def eth_speed(d):
             "flag": False,
             "message": 'cant connect iperf server!'
         })
-    elif speed < standard:
+    elif speed < standard or speed > standard + 20:
         result.append({
             "flag": False,
             "message": 'Eth speed is {} Mb/s'.format(str(speed))

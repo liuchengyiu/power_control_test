@@ -1,13 +1,7 @@
 import serial
 import serial.tools.list_ports
 import threading
-from time import sleep, time
-import os
-import signal
-
-def getTimeStamp() -> int:
-    return int(round(time() * 1000))
-
+from time import sleep
 
 def listPortName() -> set:
     device_name = set()
@@ -16,48 +10,19 @@ def listPortName() -> set:
     return device_name
 
 
-def dealData(com, data):
-    for d in data[:]:
-        com.container.append(d)
-    i = 0
-    container = com.container
-    if len(container) < 7:
-        return
-    while i < len(container):
-        if container[i] != 105:
-            i = i + 1
-            continue
-        if (i + 2) >= len(container):
-            break
-        length = container[i+1] + container[i+2]*256
-        if i + length > 300:
-            i = i + 1
-            continue
-        if i + length > len(container):
-            break
-        frame_ = container[i:i + length]
-        if frame_[-1] != 67:
-            i = i + 1
-            continue
-        if frame_[3] == int('87', 16):
-            com.mac = frame_[4:20]
-        if frame_[3] == int('81', 16):
-            com.deal_rx(frame_)
-        i = i + length
-    com.container = com.container[i:]
-
-
 def readData(com):
     while True:
         if com.exit is True:
-            return
+            break
         if com.isOpen() is False:
             sleep(0.1)
+            continue
+        if not com.com.readable():
             continue
         data = com.com.read(1)
         if len(data) != 0:
             com.dealFunc(com, data)
-
+    return
 
 class Com:
     def __init__(self, dealFunc):
@@ -92,7 +57,8 @@ class Com:
                 baudrate=baud_rate,
                 parity=parity,
                 stopbits=stop_bits,
-                bytesize=data_bits)
+                bytesize=data_bits,
+                timeout=1)
         except Exception as e:
             print(e)
             return False
@@ -117,6 +83,9 @@ class Com:
         self.mod = mod
 
     def closeCom(self) -> bool:
+        self.Exit()
+        self.com.flush()
+        sleep(1)
         if self.com.isOpen() is False:
             return True
         try:
@@ -128,5 +97,5 @@ class Com:
     def isOpen(self):
         return self.com.isOpen()
 
-    def __del__(self):
+    def Exit(self):
         self.exit = True

@@ -1,15 +1,20 @@
 from time import sleep
+import collections
+
 def menu(config):
     level = 1
     d = ''
+    option = ''
     print('\033[1;31m')
     while level:
         if level == 2:
+            option = d
             d = second_level(int(d), config)
         if level == 1:
+            option = d
             d = first_level()
             if d == '1':
-                return config
+                return config, option
         if d == 'exit':
             return False
         if d == 'back':
@@ -22,7 +27,7 @@ def menu(config):
             continue
         if level == 2:
             print('\033[0m')
-            return d
+            return d, option
         
 def second_level(t, config):
     print('test:')
@@ -59,7 +64,7 @@ def second_level(t, config):
             if d >= index:
                 print('too large num')
                 continue
-            result[items[d]['type']].append(items[d]['item'])
+            result[items[d]['type']].append(items[d]['item'])#测试向顺序
             return result
         if t == 3:
             ds = d.split(' ')
@@ -77,12 +82,11 @@ def second_level(t, config):
 def first_level():
     print(
         'please select test type:\n'
-        '1.entire test\n'
+        '1.all test\n'
         '2.one test\n'
-        '3.userdefine test\n'
-        'input exit to exit'
+        '3.for multiple test\n'
     )
-    result = input('input No.:')
+    result = input('input No(like:int or exit or back).:')
     if result.isdigit():
         if int(result) > 4:
             return 'back'

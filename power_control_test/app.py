@@ -1,9 +1,11 @@
 import sys
-import os
 import json
 from test import test
 from menu import menu
 from record import record
+from time import sleep
+from test.lib import mqtt_up
+from collections import OrderedDict
 def main(filename):
     json_data = {}
     hardware = []
@@ -22,20 +24,24 @@ def main(filename):
     )
     try:
         with open(filename, "r") as fp:
-            json_data = json.load(fp)
+            json_data = json.load(fp ,object_pairs_hook=OrderedDict)
     except OSError as e:
             print(
                 '\033[1;31m \t*********************************** \033[0m\n'
                 '\033[1;31m \t     parse config file failed       \033[0m\n'
                 '\033[1;31m \t*********************************** \033[0m\n'
             )
-            return 
+            return
     print(
         '\033[1;32m \t***********************************\033[0m\n'
         '\033[1;32m \t     parse config file successful\033[0m\n'
         '\033[1;32m \t***********************************\033[0m\n'
     )
     json_data = menu(json_data)
+    if json_data == False:
+        return
+    option = json_data[1]
+    json_data = json_data[0]
     if json_data == False:
         print(
             '\033[1;31m exit test\033[0m\n'
@@ -59,11 +65,32 @@ def main(filename):
         '\033[1;32m \t     start test                     \033[0m\n'
         '\033[1;32m \t***********************************\033[0m\n'
     )
-    result.extend(test(performance, 'performance'));
-    result.extend(test(hardware, 'hardware'))
-    result.extend(test(stress, 'stress'))
+    if option == '3':
+        while True:
+            test_tuple = ([], 0)
+            test_tuple = test(performance, 'performance', test_tuple[1], 25);
+            result.extend(test_tuple[0]);
+            test_tuple = test(stress, 'stress', test_tuple[1], 50);
+            result.extend(test_tuple[0]);
+            test_tuple = test(hardware, 'hardware', test_tuple[1], 75)
+            result.extend(test_tuple[0]);
+            mqtt_up('test/lcd/request', 100, 9, '')
+    test_tuple = ([], 0)
+    test_tuple = test(performance, 'performance', test_tuple[1], 25);
+    result.extend(test_tuple[0]);
+    test_tuple = test(stress, 'stress', test_tuple[1], 50);
+    result.extend(test_tuple[0]);
+    test_tuple = test(hardware, 'hardware', test_tuple[1], 75)
+    result.extend(test_tuple[0]);
+    mqtt_up('test/lcd/request', 100, 9, '')
+
+    for joins in result:
+        if joins.get('flag') == False:
+            mqtt_up('test/lcd/request', 75, 9, '')
+            sleep(2)
+            break;
+
     record(result)
-    print(result)
     return
 
 if __name__ == '__main__':

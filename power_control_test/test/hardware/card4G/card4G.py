@@ -1,6 +1,6 @@
 from test.lib import Com
 from time import sleep
-
+import threading
 
 commands = ['AT', 'ATE0', 'ATI;+CSUB;+CSQ;+CPIN?;+COPS?;+CGREG?;&D2']
 result = [{
@@ -26,6 +26,7 @@ def test_at(com, read_str):
 def testCommand(com, command):
     global result
     mod = command.split(':')[0]
+    print(command)
     com.setMod(mod)
     com.sendData(command+'\r\n')
     sleep(1)
@@ -39,19 +40,28 @@ def testCommand(com, command):
 def card_4g_at_test(d):
     global commands
     global result
-    port = d["port"]
+    port = d["serial_4g"]
     baudrate = d["baudrate"]
-    com = Com(test_at)
-    flag = com.openCom(port_name=port, baud_rate=baudrate)
-    if flag is False:
-        return result  
-    for command in commands:
-        r = testCommand(com, command)
-        if r is False:
-            com.__del__()
-            sleep(1)
+    try:
+        com = Com(test_at)
+        flag = com.openCom(port_name=port, baud_rate=baudrate)
+        if flag is False:
+            com.closeCom()
             return result
-    com.__del__()
+        for command in commands:
+            r = testCommand(com, command)
+            if r is False:
+                com.closeCom()
+                return result
+        sleep(1)
+    except Exception as e:
+        print(e)
+        com.closeCom()
+        result[0]['flag'] = False
+        result[0]['message'] = '4G AT test error'
+        return result
     result[0]['flag'] = True
     result[0]['message'] = '4G AT test pass'
+    com.closeCom()
+    sleep(1)
     return result

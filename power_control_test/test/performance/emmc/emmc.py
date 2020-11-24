@@ -3,7 +3,7 @@ from test.lib import run_shell
 def deal_shell(shell_str):
     if shell_str.find("/s") == -1:
         return -1
-    
+
     for line in shell_str.split("\r\n"):
         unit = 1
         if line.find("copied") == -1:
@@ -16,11 +16,20 @@ def deal_shell(shell_str):
         speed = speed / unit
         return speed
 
+def size_shell(shell_str : str):
+    if shell_str.find('Mem') == -1:
+        return -1
+
+    shell_str = shell_str.replace(' ', '')
+    size = float(shell_str[shell_str.find('Mem:')+4 : shell_str.find('G')])
+    return size
+
 def emmc_speed(d):
     result = []
     standard = d["speed"]
+    best_size = d["size"]
     shell_result = run_shell("dd if=/dev/zero of=file bs=1M count=1024")
-    run_shell("rm -rf file")
+    run_shell("sudo rm -rf file")
     speed = deal_shell(shell_result)
     if speed == -1:
         result.append({
@@ -36,5 +45,23 @@ def emmc_speed(d):
         result.append({
             "flag": True,
             "message": "Emmc speed is {} GB/s".format(str(speed))
+        })
+
+    shell_result = run_shell("free -h")
+    size = size_shell(shell_result)
+    if size == -1:
+        result.append({
+            "flag": False,
+            "message": "Emmc size query fails"
+        })
+    if best_size-0.2 > size or best_size+0.2 < size:
+        result.append({
+            "flag": False,
+            "message": "Emmc size is {} GB".format(str(size))
+        })
+    else:
+        result.append({
+            "flag": True,
+            "message": "Emmc size is {} GB".format(str(size))
         })
     return result

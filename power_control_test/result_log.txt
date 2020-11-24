@@ -29,3 +29,249 @@ RAM性能测试,num: 9 ram speed: 24.6GB/s,True
 RAM性能测试,average ram: 24.379999999999995GB/s,False
 4G模块测试,4G AT test pass,True
 4G模块测试,4G AT test pass,True
+CPU压力测试,CPU stress pass!,True
+CPU性能测试,average CPU freq 1799.999MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1799.999MHZ!,True
+CPU性能测试,average CPU freq 1799.999MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1799.999MHZ!,True
+CPU性能测试,average CPU freq 1799.999MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1799.999MHZ!,True
+CPU性能测试,average CPU freq 1799.999MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1799.999MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1799.999MHZ!,True
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+485收发测试,ttyUSB serial error!,False
+继电器开关测试,relay_test pass!,True
+继电器开关测试,ttyACM serial error!,False
+交采模块测试,create mqtt client error!,False
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+CPU性能测试,average CPU freq 1800.0MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1800.0MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1800.0MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1800.0MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1800.0MHZ!,True
+EMMC性能测试,Emmc speed is 0.578 GB/s,True
+RAM性能测试,num: 0 ram speed: 16.5GB/s,True
+RAM性能测试,num: 1 ram speed: 16.6GB/s,True
+RAM性能测试,num: 2 ram speed: 18.5GB/s,True
+RAM性能测试,num: 3 ram speed: 17.1GB/s,True
+RAM性能测试,num: 4 ram speed: 16.0GB/s,True
+RAM性能测试,num: 5 ram speed: 17.6GB/s,True
+RAM性能测试,num: 6 ram speed: 18.0GB/s,True
+RAM性能测试,num: 7 ram speed: 18.8GB/s,True
+RAM性能测试,num: 8 ram speed: 17.9GB/s,True
+RAM性能测试,num: 9 ram speed: 19.0GB/s,True
+RAM性能测试,average ram: 17.6GB/s,True
+RTC时间测试,RTC datetime failed!,False
+CPU压力测试,CPU stress failed!,False
+RAM压力测试,ram stress failed!,False
+4G模块测试,open port failed!,False
+网卡模块测试,cant connect iperf server!,False
+交采模块测试,create mqtt client error!,False
+交采自动化校准,open serial error!,False
+lcd与蜂鸣器,create mqtt client error!,False
+485收发测试,ttyUSB serial error!,False
+继电器开关测试,ttyACM serial error!,False
+4G模块测试,open port failed!,False
+继电器开关测试,relay_test file!,False
+继电器开关测试,relay_test file!,False
+继电器开关测试,relay_test pass!,True
+继电器开关测试,relay_test pass!,True
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test error,False
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+4G模块测试,4G AT test pass,True
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,open port failed!,False
+4G模块测试,open port failed!,False
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test error,False
+4G模块测试,4G AT test error,False
+4G模块测试,4G AT test error,False
+CPU压力测试,CPU stress failed!,False
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,open port failed!,False
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+CPU性能测试,average CPU freq 1800.001MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1800.001MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1800.001MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1800.001MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1800.001MHZ!,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+CPU性能测试,average CPU freq 1800.001MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1800.001MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1800.001MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1800.001MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1800.001MHZ!,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+EMMC性能测试,Emmc speed is 0.682 GB/s,True
+交采模块测试,create mqtt client error!,False
+交采自动化校准,open serial error!,False
+交采自动化校准,open serial error!,False
+交采自动化校准,auto calibrate failed!,False
+485收发测试,485 send_receive file!,False
+485收发测试,485 send_receive file!,False
+继电器开关测试,ttyACM serial error!,False
+485收发测试,Serial Protocol error!,False
+485收发测试,ttyUSB serial error!,False
+485收发测试,ttyUSB serial error!,False
+485收发测试,ttyUSB serial error!,False
+485收发测试,ttyUSB serial error!,False
+485收发测试,485 send_receive pass!,True
+485收发测试,485 send_receive pass!,True
+485收发测试,485 send_receive pass!,True
+485收发测试,ttyUSB serial error!,False
+485收发测试,ttyUSB serial error!,False
+485收发测试,ttyUSB serial error!,False
+485收发测试,485 send_receive pass!,True
+485收发测试,Serial Protocol error!,False
+485收发测试,Serial Protocol error!,False
+继电器开关测试,ttyACM serial error!,False
+继电器开关测试,Serial Protocol error!,False
+继电器开关测试,Serial Protocol error!,False
+继电器开关测试,relay_test pass!,True
+继电器开关测试,ttyACM serial error!,False
+继电器开关测试,ttyACM serial error!,False
+继电器开关测试,ttyACM serial error!,False
+继电器开关测试,relay test pass!,True
+继电器开关测试,relay test pass!,True
+继电器开关测试,relay test pass!,True
+继电器开关测试,relay test pass!,True
+继电器开关测试,relay test pass!,True
+继电器开关测试,relay test pass!,True
+继电器开关测试,relay test pass!,True
+继电器开关测试,relay test pass!,True
+继电器开关测试,relay test pass!,True
+485收发测试,485 send_receive pass!,True
+摇信测试,ttyACM serial error!,False
+继电器开关测试,ttyACM serial error!,False
+继电器开关测试,relay on-off error,False
+继电器开关测试,relay on-off error,False
+摇信测试,ttyACM serial error!,False
+摇信测试,ttyACM serial error!,False
+摇信测试,ttyACM serial error!,False
+摇信测试,ttyACM serial error!,False
+摇信测试,relay test pass!,True
+继电器开关测试,yx serial error,False
+继电器开关测试,yx serial error,False
+继电器开关测试,relay test pass!,True
+继电器开关测试,relay test pass!,True
+lcd与蜂鸣器,create mqtt client error!,False
+lcd与蜂鸣器,create mqtt client error!,False
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test error,False
+4G模块测试,4G AT test pass,True
+4G模块测试,4G AT test pass,True
+EMMC性能测试,Emmc speed is 0.421 GB/s,True
+RAM性能测试,num: 0 ram speed: 14.8GB/s,True
+RAM性能测试,num: 1 ram speed: 15.3GB/s,True
+RAM性能测试,num: 2 ram speed: 15.2GB/s,True
+RAM性能测试,num: 3 ram speed: 16.0GB/s,True
+RAM性能测试,num: 4 ram speed: 17.3GB/s,True
+RAM性能测试,num: 5 ram speed: 18.1GB/s,True
+RAM性能测试,num: 6 ram speed: 17.2GB/s,True
+RAM性能测试,num: 7 ram speed: 17.3GB/s,True
+RAM性能测试,num: 8 ram speed: 16.4GB/s,True
+RAM性能测试,num: 9 ram speed: 17.2GB/s,True
+RAM性能测试,average ram: 16.479999999999997GB/s,True
+EMMC性能测试,Emmc speed is 0.313 GB/s,True
+EMMC性能测试,Emmc speed test failed,False
+EMMC性能测试,Emmc speed is -1 GB/s,False
+EMMC性能测试,Emmc size is 1.9 GB,False
+EMMC性能测试,Emmc speed is 0.337 GB/s,True
+EMMC性能测试,Emmc size is 1.9 GB,False
+EMMC性能测试,Emmc speed is 0.564 GB/s,True
+EMMC性能测试,Emmc size is 1.9 GB,True
+RAM性能测试,num: 0 ram speed: 12.4GB/s,True
+RAM性能测试,num: 1 ram speed: 18.1GB/s,True
+RAM性能测试,num: 2 ram speed: 17.7GB/s,True
+RAM性能测试,num: 3 ram speed: 18.8GB/s,True
+RAM性能测试,num: 4 ram speed: 18.9GB/s,True
+RAM性能测试,num: 5 ram speed: 18.8GB/s,True
+RAM性能测试,num: 6 ram speed: 19.1GB/s,True
+RAM性能测试,num: 7 ram speed: 18.8GB/s,True
+RAM性能测试,num: 8 ram speed: 17.4GB/s,True
+RAM性能测试,num: 9 ram speed: 18.5GB/s,True
+RAM性能测试,average ram: 17.85GB/s,True
+RAM性能测试,Ram size is 19.0 G,True
+RAM性能测试,num: 0 ram speed: 18.0GB/s,True
+RAM性能测试,num: 1 ram speed: 18.8GB/s,True
+RAM性能测试,num: 2 ram speed: 19.1GB/s,True
+RAM性能测试,num: 3 ram speed: 18.1GB/s,True
+RAM性能测试,num: 4 ram speed: 18.6GB/s,True
+RAM性能测试,num: 5 ram speed: 18.8GB/s,True
+RAM性能测试,num: 6 ram speed: 19.0GB/s,True
+RAM性能测试,num: 7 ram speed: 17.9GB/s,True
+RAM性能测试,num: 8 ram speed: 17.7GB/s,True
+RAM性能测试,num: 9 ram speed: 18.8GB/s,True
+RAM性能测试,average ram: 18.479999999999997GB/s,True
+RAM性能测试,Ram size is 19.0 G,True
+RAM性能测试,num: 0 ram speed: 18.1GB/s,True
+RAM性能测试,num: 1 ram speed: 18.2GB/s,True
+RAM性能测试,num: 2 ram speed: 19.1GB/s,True
+RAM性能测试,num: 3 ram speed: 18.5GB/s,True
+RAM性能测试,num: 4 ram speed: 18.6GB/s,True
+RAM性能测试,num: 5 ram speed: 18.6GB/s,True
+RAM性能测试,num: 6 ram speed: 18.7GB/s,True
+RAM性能测试,num: 7 ram speed: 19.1GB/s,True
+RAM性能测试,num: 8 ram speed: 18.9GB/s,True
+RAM性能测试,num: 9 ram speed: 18.5GB/s,True
+RAM性能测试,average ram: 18.63GB/s,True
+RAM性能测试,Ram size is 19.0 G,True
+EMMC性能测试,Emmc speed is 0.581 GB/s,True
+EMMC性能测试,Emmc size is 1.9 GB,True
+EMMC性能测试,Emmc speed is 0.622 GB/s,True
+EMMC性能测试,Emmc size is 1.9 GB,True
+CPU性能测试,average CPU freq 1800.001MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1800.001MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1800.001MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1800.001MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1800.001MHZ!,True
+CPU性能测试,average CPU freq 1800.001MHZ!,True
+CPU性能测试,num: 0 CPU freq: 1800.001MHZ!,True
+CPU性能测试,num: 1 CPU freq: 1800.001MHZ!,True
+CPU性能测试,num: 2 CPU freq: 1800.001MHZ!,True
+CPU性能测试,num: 3 CPU freq: 1800.001MHZ!,True

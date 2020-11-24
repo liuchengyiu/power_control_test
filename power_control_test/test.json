@@ -20,45 +20,96 @@
         {
             "type":"cpu_frequence",
             "param":{
-                "average": 100,
-                "single": 100
+                "average": 1200,
+                "single": 800
             }
         },
         {
             "type":"emmc_speed",
             "param":{
-                "speed": 100
+                "speed": 0.02,
+                "size": 2
             }
         },
         {
             "type":"ram_speed",
             "param":{
-                "speed": 100
+                "speed": 1.4,
+                "size": 20
+            }
+        },
+        {
+            "type":"rtc_time",
+            "param":{
+                "time": 5
             }
         }
     ],
     "Hardware_Test":[
         {
+            "type":"card_4g_at_test",
+            "param":{
+                "serial_4g": "/dev/ttyACM2",
+                "baudrate": 115200
+            }
+        },
+        {
             "type":"eth_speed",
             "param":{
-                "serverip":"192.168.1.118",
-                "speed":100
+                "serverip":"192.168.1.115",
+                "speed":90
             }
         },
         {
             "type":"jc_test",
             "param":{
-                "ip":"192.168.3.39",
+                "ip":"127.0.0.1",
                 "port": 1883,
-                "interval": 3,
+                "interval": 1,
+                "serial_jc":"/dev/ttyS6",
                 "times": 4
             }
         },
         {
-            "type":"card_4g_at_test",
+            "type":"auto_jc",
             "param":{
-                "port": "/dev/ttyACM2",
-                "baudrate": 115200
+                "serial_jc":"/dev/ttyS6",
+                "serial_power": "/dev/ttyACM1"
+            }
+        },
+        {
+            "type":"key_test",
+            "param":{
+                "ip":"127.0.0.1",
+                "port": 1883,
+                "times": 20,
+                "gpio": 200
+            }
+        },
+        {
+            "type":"test_485",
+            "param":{
+                "serial_485_sub":"/dev/ttyACM0",
+                "serial_send":"/dev/ttyACM1",
+                "serial_read":"/dev/ttyACM4",
+                "time": 5,
+                "time_01": 1
+            }
+        },
+        {
+            "type":"relay_test",
+            "param":{
+                "serial_relay_business":"/dev/ttyACM0",
+                "serial_relay_switch":"/dev/ttyACM1",
+                "serial_yx_switch":"/dev/ttyACM3",
+                "time": 0.5
+            }
+        },
+        {
+            "type":"yx_test",
+            "param":{
+                "serial_yx_business":"/dev/ttyACM2",
+                "time": 0.5
             }
         }
     ]
